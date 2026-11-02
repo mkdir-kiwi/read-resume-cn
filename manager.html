@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>阅读存档 · 继续读</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <main class="shell">
+    <header><div><p class="eyebrow">READ RESUME / 继续读</p><h1>留一页，给下次。</h1><p class="muted">网页与阅读位置，只保存在这台电脑的当前浏览器配置中。</p></div><button id="export" class="secondary">导出备份</button></header>
+    <nav><button id="show-history">历史项目</button><button id="show-select" class="secondary">选择网页保存</button></nav>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="selection" hidden>
+      <div class="section-title"><h2>选择当前窗口的网页</h2><button id="refresh-tabs" class="secondary">刷新列表</button></div>
+      <label>项目名称<input id="name" maxlength="100" placeholder="例如：论文阅读 / 旅行资料 / 新项目调研"></label>
+      <div class="actions"><button id="toggle-all" class="secondary">全选 / 取消全选</button><button id="save-selected">保存选中网页</button></div>
+      <div id="tabs" class="cards"></div>
+    </section>
+    <section id="history"><div class="section-title"><h2>你的阅读存档</h2><label class="import-label">导入备份<input type="file" id="import" accept="application/json,.json"></label></div><div id="projects" class="cards"></div></section>
+    <footer>版本0.1：恢复会在新窗口打开网页，位置可能受页面变化影响。卸载扩展会移除本地存档，请先导出，下次安装扩展可再次导入存档。</footer>
+  </main>
+  <script src="manager.js"></script>
+</body></html>

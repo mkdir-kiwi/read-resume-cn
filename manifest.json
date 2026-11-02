@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "继续读 · Read Resume",
+  "version": "0.1.0",
+  "description": "保存一组网页，在下次打开时尝试恢复阅读位置。数据仅存本机。",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "继续读",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "incognito": "not_allowed"
+}

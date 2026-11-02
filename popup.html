@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>继续读</title><link rel="stylesheet" href="style.css"></head>
+<body class="popup">
+  <p class="eyebrow">READ RESUME / 继续读</p><h1>暂时离开，<br>下次接着读。</h1>
+  <p class="muted">普通网页支持位置记录。特殊页面仅能跳过或保存链接。</p>
+  <label>存档名称（可留空）<input id="name" maxlength="100" placeholder="例如：周末旅行资料"></label>
+  <div class="actions vertical">
+    <button data-action="SAVE_CURRENT">保存当前网页</button>
+    <button data-action="SAVE_WINDOW">保存当前窗口全部网页</button>
+    <button data-action="SAVE_ALL" class="secondary">保存所有窗口</button>
+    <button id="select" class="secondary">选择网页保存…</button>
+    <button id="history" class="secondary">查看历史项目 →</button>
+  </div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <script src="popup.js"></script>
+</body></html>
